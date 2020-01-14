@@ -1,4 +1,3 @@
-import sys
 from kinematics import Twist
+from files import getEvents, getTeamsForEvent, getFilesForTeamForEvent
 
-# Handle file loading
