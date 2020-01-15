@@ -30,7 +30,7 @@ class Twist(object):
         self.dTheta = dTheta
 
     @classmethod
-    def fromTranslation(prevX: float, prevY: float, x: float, y: float) -> None:
+    def fromTranslation(self, prevX: float, prevY: float, x: float, y: float) -> None:
         """
         Create a Twist from last and current points in space
 
@@ -48,9 +48,9 @@ class Twist(object):
         dTheta: float = atan2(dx, dy)
 
         # Create a new Twist
-        return Twist(dx, dy, dTheta)
+        return self(dx, dy, dTheta)
 
-    def toWheelSpeeds() -> (float, float):
+    def toWheelSpeeds(self) -> (float, float):
         """
         Calculate differential wheel velocities from Twist
         """
